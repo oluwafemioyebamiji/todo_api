@@ -8,8 +8,9 @@ class Todo(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now = True)
     completed_at = models.DateField(null=True)
-    status = models.CharField(max_length = 200, default = "open")
+    status = models.CharField(max_length = 200, default = "new")
     is_archived = models.BooleanField(default = False)
+    percentage_completion = models.IntegerField(default = 0)
 
     def __str__(self):
         return f"{self.title} - {self.status}"
