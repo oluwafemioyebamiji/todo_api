@@ -18,3 +18,7 @@ class AdminTodoListCreateView(generics.ListCreateAPIView):
     serializer_class = serializers.TodoSerializer
 
 
+class AdminTodoEditView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = serializers.TodoSerializer
+

@@ -21,8 +21,10 @@ from todo import apiviews
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("todo/list", apiviews.TodoListView.as_view()),
-    path("admintodo/listcreate", apiviews.AdminTodoListCreateView.as_view()),
-    path("todo/create", apiviews.TodoCreateView.as_view()),
+    path("todo/list/", apiviews.TodoListView.as_view()),
+    path("admintodo/listcreate/", apiviews.AdminTodoListCreateView.as_view()),
+    path("todo/create/", apiviews.TodoCreateView.as_view()),
+    path("todo/edit/<pk>/", apiviews.AdminTodoEditView.as_view()),
+    
     
 ]
