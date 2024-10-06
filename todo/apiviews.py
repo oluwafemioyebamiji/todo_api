@@ -22,3 +22,7 @@ class AdminTodoEditView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Todo.objects.all()
     serializer_class = serializers.TodoSerializer
 
+class TodoEditWithSlugView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = serializers.TodoSerializer
+    lookup_field = 'slug'

@@ -25,6 +25,7 @@ urlpatterns = [
     path("admintodo/listcreate/", apiviews.AdminTodoListCreateView.as_view()),
     path("todo/create/", apiviews.TodoCreateView.as_view()),
     path("todo/edit/<pk>/", apiviews.AdminTodoEditView.as_view()),
+    path("todo/slug/edit/<slug>/", apiviews.TodoEditWithSlugView.as_view()),
     
     
 ]
